@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Notification icon, will appear in the toolbar if there is space -->
+    <item
+        android:id="@+id/menunotification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification"
+        app:showAsAction="ifRoom" />
+
+    <!-- Profile icon, will appear in the toolbar if there is space -->
+    <item
+        android:id="@+id/menumyprofile"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+
+    <!-- The rest of the items will be in the overflow menu -->
+    <item
+        android:id="@+id/menusetting"
+        android:title="Settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menulogout"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+</menu>

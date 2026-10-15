@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- The background color of the search view. It uses a theme attribute -->
+    <!-- to work correctly in both light and dark modes. -->
+    <solid android:color="?attr/colorSurface" />
+    <corners android:radius="28dp" />
+</shape>

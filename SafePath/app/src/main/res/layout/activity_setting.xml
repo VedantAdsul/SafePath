@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SettingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="Settings" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Appearance & Map Section -->
+            <TextView
+                style="@style/SettingsHeader"
+                android:text="APPEARANCE &amp; MAP" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsCard">
+                <LinearLayout style="@style/SettingsCardContent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Map Type">
+                        <AutoCompleteTextView
+                            android:id="@+id/map_type_dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switch_safe_zones"
+                        style="@style/SettingsSwitch"
+                        android:text="Show Safe Zones" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Theme">
+                        <AutoCompleteTextView
+                            android:id="@+id/theme_dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- SOS Preferences Section -->
+            <TextView
+                style="@style/SettingsHeader"
+                android:text="SOS PREFERENCES" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsCard">
+                <LinearLayout style="@style/SettingsCardContent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SOS Actions"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:layout_marginBottom="8dp"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/sos_sms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Send Automated SMS"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/sos_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Call Emergency Contact"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/sos_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Start Recording (Audio/Video)"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/sos_siren"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Siren Sound"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/sos_flash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Flash Blinking"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- Data & App Section -->
+            <TextView
+                style="@style/SettingsHeader"
+                android:text="DATA &amp; APP" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsCard">
+                <LinearLayout style="@style/SettingsCardContent">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Location Update Frequency">
+                        <AutoCompleteTextView
+                            android:id="@+id/location_freq_dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Support & Legal Section -->
+            <TextView
+                style="@style/SettingsHeader"
+                android:text="SUPPORT &amp; LEGAL" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsCard">
+                <LinearLayout
+                    style="@style/SettingsCardContent"
+                    android:divider="@drawable/divider"
+                    android:showDividers="middle">
+                    <TextView
+                        android:id="@+id/item_contact_us"
+                        style="@style/SettingsNavigationItem"
+                        android:text="Contact Us" />
+                    <TextView
+                        android:id="@+id/item_about_us"
+                        style="@style/SettingsNavigationItem"
+                        android:text="About Us" />
+                    <TextView
+                        android:id="@+id/item_privacy_policy"
+                        style="@style/SettingsNavigationItem"
+                        android:text="Privacy Policy" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Account Section -->
+            <TextView
+                style="@style/SettingsHeader"
+                android:text="ACCOUNT" />
+
+            <com.google.android.material.card.MaterialCardView style="@style/SettingsCard">
+                <LinearLayout
+                    style="@style/SettingsCardContent"
+                    android:padding="8dp">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_delete_account"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delete Account"
+                        android:textColor="?attr/colorError" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
