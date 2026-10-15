@@ -35,7 +35,7 @@ SafePath brings together emergency tools, location sharing, safety maps, and tru
 ### Prerequisites
 
 - Android Studio with Android SDK support for **API 35**
-- JDK 11-compatible Java toolchain
+- JDK 17 (required by Android Gradle Plugin 8.10.1; Java source compatibility is set to 11)
 - An Android device or emulator running **Android 7.0 (API 24)** or later
 - Valid configuration for the Google Maps and Firebase services used by the app
 
