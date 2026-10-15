@@ -4,7 +4,6 @@
 
 SafePath brings together emergency tools, location sharing, safety maps, and trusted-contact features to help users respond more quickly when they feel unsafe.
 
-> **Project status:** This repository contains the Android application source code. Review and test emergency workflows on your own device before relying on them in a real emergency.
 
 ## Features
 
@@ -16,8 +15,7 @@ SafePath brings together emergency tools, location sharing, safety maps, and tru
 - **Quick safety tools** — access a flashlight, first-aid reference, and emergency calling shortcut.
 - **Configurable SOS actions** — choose supported actions such as SMS, calling, audio recording, a siren, and flashlight signaling.
 - **User profile and notifications** — includes profile, settings, and Firebase messaging components.
-
-*Feature availability depends on device hardware, granted Android permissions, network connectivity, and the app's configuration.*
+  
 
 ## Tech stack
 
